@@ -22,7 +22,7 @@ Clone o Repositório (se estiver usando Git):
 bash
 Wrap
 Copy
-git clone https://github.com/seu_usuario/sou-cidadao.git
+git clone https://github.com/AlfredAlpha/sou_cidadao_web_beta.git
 cd sou-cidadao
 Caso contrário, baixe os arquivos manualmente.
 Crie um Ambiente Virtual (opcional, mas recomendado):
