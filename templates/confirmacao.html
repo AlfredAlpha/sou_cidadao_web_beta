@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sou Cidadão - Confirmação</title>
+    <style>
+        body {
+            background-color: #FFFFFF;
+            color: #000080;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: #000080;
+        }
+        .button {
+            background-color: #006400;
+            color: #FFFFFF;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin: 5px;
+        }
+        .button:hover {
+            background-color: #004d00;
+        }
+        .dados {
+            background-color: #F0F0F0;
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            text-align: left;
+            border: 1px solid #000080;
+        }
+        .error, .success {
+            margin: 10px;
+        }
+        .error {
+            color: red;
+        }
+        .success {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sou Cidadão</h1>
+    <h2>Confirme os Dados</h2>
+    <div class="dados">
+        <p><strong>Nome:</strong> {{ solicitacao.nome }}</p>
+        <p><strong>Telefone:</strong> {{ solicitacao.telefone }}</p>
+        <p><strong>Descrição:</strong> {{ solicitacao.descricao }}</p>
+        <p><strong>Vereador:</strong> {{ solicitacao.vereador_email }}</p>
+        {% if solicitacao.foto_path %}
+            <p><strong>Foto:</strong> Anexada</p>
+        {% else %}
+            <p><strong>Foto:</strong> Não anexada</p>
+        {% endif %}
+    </div>
+    <form method="POST" action="{{ url_for('confirmacao', solicitacao_id=solicitacao.id) }}">
+        <button type="submit" class="button">Enviar</button>
+        <a href="{{ url_for('apresentacao') }}"><button type="button" class="button">Voltar ao Início</button></a>
+    </form>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                {% if "Erro" in message %}
+                    <p class="error">{{ message }}</p>
+                {% else %}
+                    <p class="success">{{ message }}</p>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+</body>
+</html>

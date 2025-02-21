@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sou Cidadão - Seleção de Vereador</title>
+    <style>
+        body {
+            background-color: #FFFFFF;
+            color: #000080;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: #000080;
+        }
+        .button {
+            background-color: #006400;
+            color: #FFFFFF;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin: 5px;
+        }
+        .button:hover {
+            background-color: #004d00;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sou Cidadão</h1>
+    <h2>Selecione o Vereador</h2>
+    <form method="POST" action="{{ url_for('selecao_vereador') }}">
+        <select name="vereador" style="padding: 10px; margin-bottom: 10px;">
+            {% for vereador in vereadores %}
+                <option value="{{ vereador.email }}">{{ vereador.nome }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <button type="submit" class="button">Próximo</button>
+    </form>
+</body>
+</html>
