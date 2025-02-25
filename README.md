@@ -27,7 +27,7 @@
 1. **Clone o Repositório** (se aplicável):
    ```bash
    git clone https://github.com/AlfredAlpha/sou_cidadao_web_beta.git
-   cd ssou_cidadao_web_beta
+   cd sou_cidadao_web_beta
 
 Ou baixe os arquivos manualmente.
 
