@@ -130,4 +130,4 @@ git commit -m "Versão inicial do Sou Cidadão Web com SQLite"
 Código aberto para fins educacionais ou municipais.
 
 Contato
-Desenvolvido por [AlfredAlpha]. Contato: [alfredoamorim@gmail.comseu_email@example.com].
+Desenvolvido por [AlfredAlpha]. Contato: [alfredoamorim@gmail.com].
