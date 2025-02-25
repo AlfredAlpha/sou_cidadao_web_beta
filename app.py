@@ -7,14 +7,13 @@ from email.mime.image import MIMEImage
 import os
 
 app = Flask(__name__)
-app.secret_key = "sua_chave_secreta"  # Para flash messages
+app.secret_key = "sua_chave_secreta"
 UPLOAD_FOLDER = 'uploads'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///solicitacoes.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
-# Inicializa o banco de dados
 db = SQLAlchemy(app)
 
 # Configurações de e-mail
