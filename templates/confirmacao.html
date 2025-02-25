@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Sou Cidadão - Confirmação</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Sou Cidadão</h1>
+    <h2>Confirme os Dados</h2>
+    <div class="dados">
+        <p><strong>Nome:</strong> {{ solicitacao.nome }}</p>
+        <p><strong>Telefone:</strong> {{ solicitacao.telefone }}</p>
+        <p><strong>Descrição:</strong> {{ solicitacao.descricao }}</p>
+        <p><strong>Vereador:</strong> {{ solicitacao.vereador_email }}</p>
+        <p><strong>Foto:</strong> {% if solicitacao.foto_path %} Anexada {% else %} Não anexada {% endif %}</p>
+        <p><strong>Status:</strong> {{ solicitacao.status }}</p>
+    </div>
+    <form method="POST">
+        <button type="submit" class="button">Enviar</button>
+        <a href="{{ url_for('apresentacao') }}"><button type="button" class="button">Voltar ao Início</button></a>
+    </form>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                {% if "Erro" in message %}
+                    <p class="error">{{ message }}</p>
+                {% else %}
+                    <p class="success">{{ message }}</p>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Sou Cidadão - Preencher Dados</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Sou Cidadão</h1>
+    <h2>Preencha os Dados</h2>
+    <form method="POST">
+        <input type="text" name="nome" placeholder="Nome" required><br>
+        <input type="text" name="telefone" placeholder="Telefone" required><br>
+        <textarea name="descricao" placeholder="Descrição" rows="5" required></textarea><br>
+        <button type="submit" class="button">Próximo</button>
+    </form>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <p class="error">{{ message }}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+</body>
+</html>

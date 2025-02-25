@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Sou Cidadão - Seleção de Vereador</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Sou Cidadão</h1>
+    <h2>Selecione o Vereador</h2>
+    <form method="POST">
+        <select name="vereador" class="select">
+            {% for vereador in vereadores %}
+                <option value="{{ vereador.email }}">{{ vereador.nome }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <button type="submit" class="button">Próximo</button>
+    </form>
+</body>
+</html>
