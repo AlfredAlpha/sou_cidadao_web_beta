@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Sou Cidadão - Cabreúva</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Sou Cidadão</h1>
+        <p>Faça sua solicitação aos vereadores de Cabreúva!</p>
+        <a href="{{ url_for('vereadores') }}" class="btn">Iniciar</a>
+    </div>
+</body>
+</html>

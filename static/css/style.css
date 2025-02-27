@@ -1,0 +1,71 @@
+body {
+    background-color: #006400; /* Verde */
+    color: #FFD700; /* Amarelo */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    text-align: center;
+    padding: 50px;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+.btn {
+    background-color: #FFFFFF; /* Branco */
+    color: #006400;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #FFD700;
+}
+
+.voltar {
+    background-color: #FFD700;
+    color: #006400;
+}
+
+.voltar:hover {
+    background-color: #FFFFFF;
+}
+
+select, input[type="text"], textarea {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #FFD700;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    color: #006400;
+}
+
+input[type="file"] {
+    margin: 20px 0;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.message {
+    margin-top: 20px;
+    font-size: 18px;
+}

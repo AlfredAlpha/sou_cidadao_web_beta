@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Sou Cidadão - Escolha o Vereador</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Escolha o Vereador</h1>
+        <form method="POST">
+            <select name="vereador" required>
+                <option value="">Selecione um vereador</option>
+                {% for i, vereador in enumerate(vereadores) %}
+                    <option value="{{ i }}">{{ vereador.nome }}</option>
+                {% endfor %}
+            </select>
+            <button type="submit" class="btn">Continuar</button>
+        </form>
+    </div>
+</body>
+</html>
