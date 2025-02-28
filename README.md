@@ -148,12 +148,6 @@ sou_cidadao/
     git remote add origin https://github.com/AlfredAlpha/sou_cidadao_web_beta.git
     git push -u origin main
 
-**Notas Adicionais**
-* Segurança: Em produção, use HTTPS e proteja as credenciais com variáveis de ambiente.
-* Escalabilidade: MySQL já suporta maior volume, mas considere índices para desempenho.
-* Expansão: Adicione uma interface administrativa para consultar solicitações no banco de dados.
-* Cores: Verde (#006400), Amarelo (#FFD700), Branco (#FFFFFF) refletem a bandeira de Cabreúva.
-
 **Contribuição**
 Abra issues ou pull requests no repositório (se aplicável).
 
