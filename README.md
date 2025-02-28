@@ -30,60 +30,65 @@
    ```bash
    git clone https://github.com/seu-usuario/sou-cidadao.git
    cd sou-cidadao
+
 Ou baixe os arquivos manualmente.
 
-Crie um Ambiente Virtual (opcional, recomendado):
-bash
-python -m venv venv
-source venv/bin/activate  # Linux/Mac
-venv\Scripts\activate     # Windows
+2. **Crie um Ambiente Virtual** (opcional, recomendado):
+    ```bash
+    python -m venv venv
+    source venv/bin/activate  # Linux/Mac
+    venv\Scripts\activate     # Windows
 
-Instale as Dependências:
-bash
-pip install -r requirements.txt
+3. **Instale as Dependências:** 
+    ```bash
+    pip install -r requirements.txt
 
-Configure o MySQL:
-Acesse o MySQL:
-bash
-mysql -u root -p
+4. **Configure o MySQL:**
+* Acesse o MySQL:
+    ```bash
+    mysql -u root -p
 
-Crie o banco de dados e a tabela:
-sql
-CREATE DATABASE sou_cidadao;
-USE sou_cidadao;
-CREATE TABLE solicitacoes (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    vereador_id INT NOT NULL,
-    nome VARCHAR(255) NOT NULL,
-    telefone VARCHAR(20) NOT NULL,
-    descricao TEXT NOT NULL,
-    foto_path VARCHAR(255)
-);
-EXIT;
+* Crie o banco de dados e a tabela:
+    ```sql
+    CREATE DATABASE sou_cidadao;
+    USE sou_cidadao;
+    CREATE TABLE solicitacoes (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        vereador_id INT NOT NULL,
+        nome VARCHAR(255) NOT NULL,
+        telefone VARCHAR(20) NOT NULL,
+        descricao TEXT NOT NULL,
+        foto_path VARCHAR(255)
+    );
+    EXIT;
 
-Configure o Projeto:
-Crie a pasta static/uploads/:
-bash
-mkdir static/uploads
+5. **Configure o Projeto:**
+* Crie a pasta static/uploads/:
+    ```bash
+    mkdir static/uploads
 
-Crie um arquivo .env na raiz do projeto com suas credenciais:
-text
-MYSQL_HOST=localhost
-MYSQL_USER=root
-MYSQL_PASSWORD=sua-senha-aqui
-MYSQL_DB=sou_cidadao
-SECRET_KEY=sua-chave-secreta-aqui
-EMAIL_USER=seu-email@gmail.com
-EMAIL_PASSWORD=sua-senha-de-app-aqui
-Como Executar
+* Crie um arquivo .env na raiz do projeto com suas credenciais:
+    ```text
+    MYSQL_HOST=localhost
+    MYSQL_USER=root
+    MYSQL_PASSWORD=sua-senha-aqui
+    MYSQL_DB=sou_cidadao
+    SECRET_KEY=sua-chave-secreta-aqui
+    EMAIL_USER=seu-email@gmail.com
+    EMAIL_PASSWORD=sua-senha-de-app-aqui
 
-Inicie o Servidor:
-bash
-python app.py
-Acesse em http://127.0.0.1:5000 no navegador. O banco de dados será acessado automaticamente se configurado corretamente.
+**Como Executar**
 
-Estrutura do Projeto
-text
+1. **Inicie o Servidor:**
+    ```bash
+
+    python app.py
+
+2. **Acesse em http://127.0.0.1:5000 no navegador. O banco de dados será acessado automaticamente se configurado corretamente.**
+
+**Estrutura do Projeto**
+    ```text
+
 sou_cidadao/
 │
 ├── app.py              # Código principal do Flask com MySQL
@@ -102,53 +107,58 @@ sou_cidadao/
 ├── requirements.txt    # Dependências
 └── README.md           # Documentação
 
-Uso
-Apresentação: Clique em "Iniciar".
-Seleção de Vereador: Escolha um vereador e clique em "Continuar".
-Preenchimento de Dados: Insira nome, telefone e descrição, clique em "Próximo".
-Adicionar Foto: Faça upload de uma foto (opcional) ou clique em "Pular". Botão "Voltar" disponível.
-Confirmação: Clique em "Enviar" para mandar o e-mail ao vereador ou "Voltar" ao início.
-Feedback: Mensagem de sucesso ou erro será exibida; os dados são salvos no MySQL.
-Vereadores Pré-definidos
-Antonio Carlos Pereira (Pereira da Saúde) - pereira.da.saude@camaracabreuva.sp.gov.br
-Armando Erik Domingues de Castro (Armando Castro) - armando.castro@camaracabreuva.sp.gov.br
-Devani Cristina de Araújo Debone (Devani Debone) - devani.debone@camaracabreuva.sp.gov.br
-Inivaldo dos Santos (Mirandinha) - mirandinha@camaracabreuva.sp.gov.br
-Luciano Carlos Barboza (Luciano Barboza) - luciano.barboza@camaracabreuva.sp.gov.br
-Luis Henrique Berti Barcelos (Barcelos) - barcelos@camaracabreuva.sp.gov.br
-Marlúcia de Fátima Valente (Marlúcia Valente) - marlucia.valente@camaracabreuva.sp.gov.br
-Rodrigo José Santi (Rodrigo Santi) - rodrigo.santi@camaracabreuva.sp.gov.br
-Vitor Davi Ricci Camargo (Vitor Camargo) - vitor.camargo@camaracabreuva.sp.gov.br
-Banco de Dados
-Tabela: solicitacoes
-Colunas:
-id: Chave primária (inteiro, autoincrementado).
-vereador_id: Índice do vereador na lista (inteiro, obrigatório).
-nome: Nome do cidadão (texto, obrigatório).
-telefone: Telefone (texto, obrigatório).
-descricao: Descrição da solicitação (texto, obrigatório).
-foto_path: Caminho da foto (texto, opcional).
-Controle de Versão
+**Uso**
+1. Apresentação: Clique em "Iniciar".
+2. Seleção de Vereador: Escolha um vereador e clique em "Continuar".
+3. Preenchimento de Dados: Insira nome, telefone e descrição, clique em "Próximo".
+4. Adicionar Foto: Faça upload de uma foto (opcional) ou clique em "Pular". Botão "Voltar" disponível.
+5. Confirmação: Clique em "Enviar" para mandar o e-mail ao vereador ou "Voltar" ao início.
+6. Feedback: Mensagem de sucesso ou erro será exibida; os dados são salvos no MySQL.
 
-Inicialize o Git:
-bash
-git init
-git add .
-git commit -m "Versão inicial do Sou Cidadão Web com MySQL"
+**Vereadores Pré-definidos**
+* Antonio Carlos Pereira (Pereira da Saúde) - pereira.da.saude@camaracabreuva.sp.gov.br
+* Armando Erik Domingues de Castro (Armando Castro) - armando.castro@camaracabreuva.sp.gov.br
+* Devani Cristina de Araújo Debone (Devani Debone) - devani.debone@camaracabreuva.sp.gov.br
+* Inivaldo dos Santos (Mirandinha) - mirandinha@camaracabreuva.sp.gov.br
+* Luciano Carlos Barboza (Luciano Barboza) - luciano.barboza@camaracabreuva.sp.gov.br
+* Luis Henrique Berti Barcelos (Barcelos) - barcelos@camaracabreuva.sp.gov.br
+* Marlúcia de Fátima Valente (Marlúcia Valente) - marlucia.valente@camaracabreuva.sp.gov.br
+* Rodrigo José Santi (Rodrigo Santi) - rodrigo.santi@camaracabreuva.sp.gov.br
+* Vitor Davi Ricci Camargo (Vitor Camargo) - vitor.camargo@camaracabreuva.sp.gov.br
 
-Conecte ao repositório remoto:
-bash
-git remote add origin https://github.com/AlfredAlpha/sou_cidadao_web_beta.git
-git push -u origin main
-Notas Adicionais
-Segurança: Em produção, use HTTPS e proteja as credenciais com variáveis de ambiente.
-Escalabilidade: MySQL já suporta maior volume, mas considere índices para desempenho.
-Expansão: Adicione uma interface administrativa para consultar solicitações no banco de dados.
-Cores: Verde (#006400), Amarelo (#FFD700), Branco (#FFFFFF) refletem a bandeira de Cabreúva.
-Contribuição
+**Banco de Dados**
+* Tabela: solicitacoes
+* Colunas:
+    * id: Chave primária (inteiro, autoincrementado).
+    * vereador_id: Índice do vereador na lista (inteiro, obrigatório).
+    * nome: Nome do cidadão (texto, obrigatório).
+    * telefone: Telefone (texto, obrigatório).
+    * descricao: Descrição da solicitação (texto, obrigatório).
+    * foto_path: Caminho da foto (texto, opcional).
+
+**Controle de Versão**
+
+1. Inicialize o Git:
+    ```bash
+    git init
+    git add .
+    git commit -m "Versão inicial do Sou Cidadão Web com MySQL"
+
+2. Conecte ao repositório remoto:
+    ```bash
+    git remote add origin https://github.com/AlfredAlpha/sou_cidadao_web_beta.git
+    git push -u origin main
+
+**Notas Adicionais**
+* Segurança: Em produção, use HTTPS e proteja as credenciais com variáveis de ambiente.
+* Escalabilidade: MySQL já suporta maior volume, mas considere índices para desempenho.
+* Expansão: Adicione uma interface administrativa para consultar solicitações no banco de dados.
+* Cores: Verde (#006400), Amarelo (#FFD700), Branco (#FFFFFF) refletem a bandeira de Cabreúva.
+
+**Contribuição**
 Abra issues ou pull requests no repositório (se aplicável).
 
-Licença
+**Licença**
 Código aberto para fins educacionais ou municipais.
 
 Contato

@@ -11,8 +11,8 @@
         <form method="POST">
             <select name="vereador" required>
                 <option value="">Selecione um vereador</option>
-                {% for i, vereador in enumerate(vereadores) %}
-                    <option value="{{ i }}">{{ vereador.nome }}</option>
+                {% for vereador in vereadores %}
+                    <option value="{{ loop.index0 }}">{{ vereador.nome }}</option>
                 {% endfor %}
             </select>
             <button type="submit" class="btn">Continuar</button>
