@@ -28,9 +28,8 @@
 ## Instalação
 1. **Clone o Repositório** (se aplicável):
    ```bash
-   git clone https://github.com/seu-usuario/sou-cidadao.git
-   cd sou-cidadao
-
+   git clone https://github.com/AlfredAlpha/sou_cidadao_web_beta.git
+   cd sou_cidadao_web_beta
 Ou baixe os arquivos manualmente.
 
 2. **Crie um Ambiente Virtual** (opcional, recomendado):
