@@ -1,5 +1,3 @@
-# README - Sou Cidadão (Web com MySQL)
-
 ## Descrição
 "Sou Cidadão" é uma aplicação web desenvolvida com Flask e MySQL, projetada para permitir que moradores de Cabreúva/SP enviem solicitações aos vereadores da cidade diretamente pelo navegador. A interface utiliza as cores da bandeira de Cabreúva (verde #006400, amarelo #FFD700 e branco #FFFFFF) e armazena as solicitações em um banco de dados MySQL para persistência.
 
@@ -147,12 +145,6 @@ sou_cidadao/
     ```bash
     git remote add origin https://github.com/AlfredAlpha/sou_cidadao_web_beta.git
     git push -u origin main
-
-**Notas Adicionais**
-* Segurança: Em produção, use HTTPS e proteja as credenciais com variáveis de ambiente.
-* Escalabilidade: MySQL já suporta maior volume, mas considere índices para desempenho.
-* Expansão: Adicione uma interface administrativa para consultar solicitações no banco de dados.
-* Cores: Verde (#006400), Amarelo (#FFD700), Branco (#FFFFFF) refletem a bandeira de Cabreúva.
 
 **Contribuição**
 Abra issues ou pull requests no repositório (se aplicável).
