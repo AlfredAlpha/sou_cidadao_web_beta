@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #26bd26;
+    background-color: #006400;
     margin: 0;
     padding: 0;
 }
@@ -9,7 +9,7 @@ body {
     max-width: 600px;
     margin: 50px auto;
     padding: 20px;
-    background-color: #fcfdfc;
+    background-color: #FFFFFF;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -58,7 +58,7 @@ textarea {
 }
 
 .btn:hover {
-    background-color: #218838;
+    background-color: #FFD700 ;
 }
 
 .btn.voltar {
