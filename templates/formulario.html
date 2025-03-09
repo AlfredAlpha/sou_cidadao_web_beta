@@ -2,14 +2,13 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Sou Cidadão - Preencha os Dados</title>
+    <title>Sou Cidadão - Formulário</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
     <div class="container">
-        <h1>Preencha os Dados</h1>
+        <h1>Envie sua Solicitação</h1>
         <form method="POST">
-            <input type="hidden" name="vereador_id" value="{{ vereador_id }}">
             <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome" required>
             <label for="telefone">Telefone:</label>
@@ -17,6 +16,7 @@
             <label for="descricao">Descrição:</label>
             <textarea id="descricao" name="descricao" required></textarea>
             <button type="submit" class="btn">Próximo</button>
+            <a href="{{ url_for('vereadores') }}" class="btn voltar">Voltar</a>
         </form>
     </div>
 </body>

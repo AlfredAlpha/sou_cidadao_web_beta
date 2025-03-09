@@ -105,9 +105,9 @@ def confirmacao(solicitacao_id):
             server.login(app.config['EMAIL_USER'], app.config['EMAIL_PASSWORD'])
             server.send_message(msg)
             server.quit()
-            flash('Solicitação enviada com sucesso!')
+            flash('Sua solicitação foi enviada com sucesso!')
         except Exception as e:
-            flash('Não foi possível enviar sua solicitação.')
+            flash('Erro ao enviar a solicitação. Tente novamente.')
         
         return redirect(url_for('index'))
     return render_template('confirmacao.html', solicitacao_id=solicitacao_id)

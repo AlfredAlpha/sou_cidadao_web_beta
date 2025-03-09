@@ -7,12 +7,12 @@
 </head>
 <body>
     <div class="container">
-        <h1>Enviar Foto (Opcional)</h1>
+        <h1>Envie uma Foto (Opcional)</h1>
         <form method="POST" enctype="multipart/form-data">
             <input type="file" name="foto" accept="image/*">
-            <button type="submit" class="btn">Enviar</button>
+            <button type="submit" class="btn">Enviar Foto</button>
             <a href="{{ url_for('confirmacao', solicitacao_id=solicitacao_id) }}" class="btn">Pular</a>
-            <a href="{{ url_for('index') }}" class="btn voltar">Voltar</a>
+            <a href="{{ url_for('formulario', vereador_id=solicitacao_id) }}" class="btn voltar">Voltar</a>
         </form>
     </div>
 </body>
