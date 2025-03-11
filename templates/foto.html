@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Sou Cidadão - Enviar Foto</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Envie uma Foto (Opcional)</h1>
+        <form method="POST" enctype="multipart/form-data">
+            <input type="file" name="foto" accept="image/*">
+            <button type="submit" class="btn">Enviar Foto</button>
+            <a href="{{ url_for('confirmacao', solicitacao_id=solicitacao_id) }}" class="btn">Pular</a>
+            <a href="{{ url_for('formulario', vereador_id=solicitacao_id) }}" class="btn voltar">Voltar</a>
+        </form>
+    </div>
+</body>
+</html>

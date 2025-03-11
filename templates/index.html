@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Sou Cidadão</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Bem-vindo ao Sou Cidadão</h1>
+        <p>Escolha um vereador para enviar sua solicitação.</p>
+        <a href="{{ url_for('vereadores') }}" class="btn">Começar</a>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <p class="message">{{ messages[0] }}</p>
+            {% endif %}
+        {% endwith %}
+    </div>
+</body>
+</html>
